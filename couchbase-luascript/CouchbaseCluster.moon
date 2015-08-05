@@ -1,4 +1,4 @@
-CouchbaseBucket = require "couchbase-lua.CouchbaseBucket"
+CouchbaseBucket = require "couchbase-luascript.CouchbaseBucket"
 class CouchbaseCluster
   _dsn: ''
 

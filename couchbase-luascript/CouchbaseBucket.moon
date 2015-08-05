@@ -1,4 +1,4 @@
-CouchbaseViewRequest = require "couchbase-lua.CouchbaseViewRequest"
+CouchbaseViewRequest = require "couchbase-luascript.CouchbaseViewRequest"
 
 class CouchbaseBucket
   dsn: ''

@@ -3,8 +3,8 @@ describe "CouchbaseCluster tests", ->
   local CouchbaseViewQuery
 
   setup ->
-    CouchbaseCluster = require("couchbase-lua.CouchbaseCluster")
-    CouchbaseViewQuery = require("couchbase-lua.CouchbaseViewQuery")
+    CouchbaseCluster = require("couchbase-luascript.CouchbaseCluster")
+    CouchbaseViewQuery = require("couchbase-luascript.CouchbaseViewQuery")
 
   it "Testing cluster", ->
     cluster = CouchbaseCluster "http://127.0.0.1"

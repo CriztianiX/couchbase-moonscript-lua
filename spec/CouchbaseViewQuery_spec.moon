@@ -2,7 +2,7 @@ describe "CouchbaseViewQuery tests", ->
   local CouchbaseViewQuery
 
   setup ->
-    CouchbaseViewQuery = require("couchbase-lua.CouchbaseViewQuery")
+    CouchbaseViewQuery = require("couchbase-luascript.CouchbaseViewQuery")
 
   it "Testing  params in query", ->
     defaultViewQuery = CouchbaseViewQuery\from "my_desing", "my_view"
