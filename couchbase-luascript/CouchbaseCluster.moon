@@ -6,6 +6,9 @@ class CouchbaseCluster
     @_dsn = dsn
     return @
 
+  get_dsn: =>
+    return @_dsn
+
   open_bucket: (name = 'default', password = '') =>
     bucketDsn = @_dsn
     return CouchbaseBucket(bucketDsn, name, password)

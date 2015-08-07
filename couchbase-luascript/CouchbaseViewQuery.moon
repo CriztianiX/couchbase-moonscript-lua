@@ -1,7 +1,10 @@
+json = require ("couchbase-luascript.deps.dkjson")
+
 class _CouchbaseViewQuery
-  ddoc: ''
-  name: ''
-  options: {}
+  new: =>
+    @ddoc = ''
+    @name = ''
+    @options = {}
 
   _to_string: (typed) =>
     path = '/_design/' .. @ddoc .. '/' .. typed .. '/' .. @name
@@ -16,11 +19,15 @@ class _CouchbaseViewQuery
 
 class CouchbaseDefaultViewQuery extends _CouchbaseViewQuery
   key: (key) =>
-    @options["key"] = key
+    @options["key"] = json.encode key
     return @
 
   group: (group) =>
     @options["group"] = tostring(group)
+    return @
+
+  group_level: (group_level) =>
+    @options["group_level"] = tostring(group_level)
     return @
 
   skip: (skip) =>
